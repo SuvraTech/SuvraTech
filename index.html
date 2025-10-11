@@ -1,60 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SuvraTech Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header class="site-header">
-        <img src="banner.png" alt="SuvraTech Banner" class="banner-img">
-        <div class="header-top">
+    <!-- Sticky Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
             <div class="brand">
                 <img src="logo.png" alt="SuvraTech Logo" class="logo-img">
                 <span class="brand-name">SuvraTech</span>
             </div>
-            <nav class="nav">
-                <a href="#" class="nav-link">Home</a>
-                <a href="#jobs" class="nav-link">Jobs</a>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="jobs.html" class="nav-link">Jobs</a>
                 <a href="#products" class="nav-link">Products</a>
                 <a href="#socials" class="nav-link">Socials</a>
                 <a href="#collaborations" class="nav-link">Collaborations</a>
                 <a href="#games" class="nav-link">Games</a>
                 <a href="#events" class="nav-link">Events</a>
-            </nav>
+            </div>
         </div>
-        <h1 class="site-title">SuvraTech</h1>
-        <div class="yellow-bar"></div>
-    </header>
-    
+    </nav>
 
-    <main style="max-width: 1100px; margin: 2rem auto;">
-        <section style="margin-bottom: 2rem;">
+    <!-- Hero Section with Banner -->
+    <section class="hero-section" id="home">
+        <div class="hero-container">
+            <img src="banner.png" alt="SuvraTech Banner" class="hero-banner">
+            <div class="hero-content">
+                <h1 class="hero-title">SuvraTech</h1>
+                <p class="hero-subtitle">Digital Technology</p>
+            </div>
+            <div class="hero-accent-bar"></div>
+        </div>
+    </section>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Video Section -->
+        <section class="content-section video-section">
             <div class="video-wrap">
-                <iframe src="https://www.youtube.com/embed/c-Ya0Qk_P9E?si=noP-IkKPx9I4LSaR" title="SuvraTech Introduction" frameborder="0" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/c-Ya0Qk_P9E?si=noP-IkKPx9I4LSaR"
+                    title="SuvraTech Introduction" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
-        <section style="background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 2rem;">
+
+        <!-- Welcome Section -->
+        <section class="content-section welcome-section">
             <h2>Welcome to SuvraTech!</h2>
-            <p>At SuvraTech, we are committed to delivering advanced technology solutions that drive measurable impact and long-term value. With a focus on innovation, reliability, and excellence, we want to give you products that are really advanced, high quality, and reasonable to buy. We don't want to make products that you guys throw away money on and realize it's a waste. Here at SuvraTech, we take technology to its next era.</p>
+            <p>At SuvraTech, we are committed to delivering advanced technology solutions that drive measurable impact
+                and long-term value. With a focus on innovation, reliability, and excellence, we want to give you
+                products that are really advanced, high quality, and reasonable to buy. We don't want to make products
+                that you guys throw away money on and realize it's a waste. Here at SuvraTech, we take technology to its
+                next era.</p>
         </section>
-        <section style="background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 2rem; margin-top: -1rem;">
-            <h2 style="text-transform: uppercase; font-weight: bold; letter-spacing: 1px;">Our Socials!</h2>
-            <hr style="margin: 1rem 0;">
-            <p style="font-size: 1.1rem; margin-top: 2rem;">YOUTUBE - <a href="https://www.youtube.com/@SuvraTech" target="_blank" style="color: #222; text-decoration: underline;">@SUVRATECH (SUVRATECH)</a></p>
+
+        <!-- Socials Section -->
+        <section class="content-section socials-section" id="socials">
+            <h2>Our Socials!</h2>
+            <hr class="section-divider">
+            <p class="social-link">YOUTUBE - <a href="https://www.youtube.com/@SuvraTech" target="_blank">@SUVRATECH (SUVRATECH)</a></p>
         </section>
-        <section style="background: #fafafa; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); padding: 2rem; margin-top: -1rem;">
-            <h2 style="font-weight: bold;">Next Product:</h2>
-            <hr style="margin: 1rem 0;">
-            <p style="font-size: 1.1rem; color: #1a237e;">Galactic Tales: The Beginning of Time</p>
+
+        <!-- Next Product Section -->
+        <section class="content-section next-product-section" id="products">
+            <h2>Next Product:</h2>
+            <hr class="section-divider">
+            <p class="product-name">Galactic Tales: The Beginning of Time</p>
         </section>
-        <section style="background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 2rem; margin-top: -1rem;">
-            <h2 style="text-transform: uppercase; font-weight: bold; letter-spacing: 1px;">Newest Products!</h2>
-            <hr style="margin: 1rem 0;">
-            <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">Tech Products will NOT be released until 2027-2028.</p>
-            <p style="font-size: 1.1rem;">Only regular products will be released.</p>
+
+        <!-- Newest Products Section -->
+        <section class="content-section newest-products-section">
+            <h2>Newest Products!</h2>
+            <hr class="section-divider">
+            <p>Tech Products will NOT be released until 2027-2028.</p>
+            <p>Only regular products will be released.</p>
         </section>
     </main>
 </body>
+
 </html>
