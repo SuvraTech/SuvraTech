@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SuvraTech Website</title>
+    <meta name="description" content="SuvraTech — Digital Technology. Products, careers, and updates from SuvraTech.">
+    <meta name="theme-color" content="#ff6a00">
+    <link rel="icon" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,14 +22,15 @@
                 <img src="logo.png" alt="SuvraTech Logo" class="logo-img">
                 <span class="brand-name">SuvraTech</span>
             </div>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+            </button>
             <div class="nav-menu">
                 <a href="index.html" class="nav-link active">Home</a>
                 <a href="jobs.html" class="nav-link">Jobs</a>
-                <a href="#products" class="nav-link">Products</a>
-                <a href="#socials" class="nav-link">Socials</a>
-                <a href="#collaborations" class="nav-link">Collaborations</a>
-                <a href="#games" class="nav-link">Games</a>
-                <a href="#events" class="nav-link">Events</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="socials.html" class="nav-link">Socials</a>
+                <a href="about.html" class="nav-link">About</a>
             </div>
         </div>
     </nav>
@@ -31,7 +38,7 @@
     <!-- Hero Section with Banner -->
     <section class="hero-section" id="home">
         <div class="hero-container">
-            <img src="banner.png" alt="SuvraTech Banner" class="hero-banner">
+            <img src="SuvraTech Banner.png" alt="SuvraTech Banner" class="hero-banner">
             <div class="hero-content">
                 <h1 class="hero-title">SuvraTech</h1>
                 <p class="hero-subtitle">Digital Technology</p>
@@ -43,13 +50,7 @@
 
     <!-- Main Content -->
     <main class="main-content">
-        <!-- Video Section -->
-        <section class="content-section video-section">
-            <div class="video-wrap">
-                <iframe src="https://www.youtube.com/embed/c-Ya0Qk_P9E?si=noP-IkKPx9I4LSaR"
-                    title="SuvraTech Introduction" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </section>
+        <!-- Video removed per request -->
 
         <!-- Welcome Section -->
         <section class="content-section welcome-section">
@@ -65,24 +66,55 @@
         <section class="content-section socials-section" id="socials">
             <h2>Our Socials!</h2>
             <hr class="section-divider">
-            <p class="social-link">YOUTUBE - <a href="https://www.youtube.com/@SuvraTech" target="_blank">@SUVRATECH (SUVRATECH)</a></p>
+            <p class="social-link">YOUTUBE - <span class="coming-soon">COMING SOON</span></p>
         </section>
 
         <!-- Next Product Section -->
         <section class="content-section next-product-section" id="products">
             <h2>Next Product:</h2>
             <hr class="section-divider">
-            <p class="product-name">Galactic Tales: The Beginning of Time</p>
+            <div style="text-align:center;">
+                <img src="images/CF1.png" alt="CELLULAR FUTURE 1 (CF1)" class="product-image" style="max-width:320px; border-radius:8px;">
+                <div style="margin-top:0.6rem;"><span class="coming-soon">COMING SOON</span></div>
+            </div>
         </section>
 
         <!-- Newest Products Section -->
         <section class="content-section newest-products-section">
             <h2>Newest Products!</h2>
             <hr class="section-divider">
-            <p>Tech Products will NOT be released until 2027-2028.</p>
-            <p>Only regular products will be released.</p>
+            <p class="product-name"><span class="coming-soon">COMING SOON</span></p>
         </section>
     </main>
+    <!-- Whats New Modal (shown on first visit) -->
+    <div id="whats-new-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="whats-new-title" aria-hidden="true" data-updates-version="2025-12-12">
+        <div class="modal-overlay" data-modal-close></div>
+        <div class="modal-panel" role="document">
+            <header class="modal-header">
+                <h2 id="whats-new-title">What's New: Version BETA</h2>
+                <button class="modal-close" aria-label="Close what's new">✕</button>
+            </header>
+            <div class="modal-body">
+                <p class="muted">Here are the latest updates we've added recently:</p>
+                <ul class="whats-new-list">
+                    <li><strong>Improved hero animation</strong> — subtle slow-zoom and parallax for depth.</li>
+                    <li><strong>Consistent banner layout</strong> — unified hero across pages.</li>
+                    <li><strong>Responsive design tweaks</strong> — improved small-screen spacing.</li>
+                    <!-- Add more updates here as needed -->
+                </ul>
+            </div>
+            <footer class="modal-footer">
+                <label class="dont-show">
+                    <input type="checkbox" id="dont-show-again"> Don't show this again
+                </label>
+                <button class="btn btn-primary modal-close" data-action="close">Continue</button>
+            </footer>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <!-- Quick open button for What's New -->
+    <button id="show-whats-new" class="whats-new-button" aria-label="Show What's New">What's New</button>
 </body>
 
 </html>

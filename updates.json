@@ -1,0 +1,23 @@
+{
+  "version": "2025-12-12",
+  "updates": [
+    {
+      "title": "Improved hero animation",
+      "desc": "Subtle slow-zoom and parallax for depth.",
+      "date": "2025-12-12",
+      "icon": "🎞️"
+    },
+    {
+      "title": "Consistent banner layout",
+      "desc": "Unified hero across pages for a cohesive look.",
+      "date": "2025-12-12",
+      "icon": "🖼️"
+    },
+    {
+      "title": "Responsive tweaks",
+      "desc": "Improved small-screen spacing and nav behavior.",
+      "date": "2025-12-12",
+      "icon": "📱"
+    }
+  ]
+}
