@@ -1,23 +1,47 @@
 {
-  "version": "2026-01-09-beta-plus",
+  "version": "2026-02-01-alpha",
   "updates": [
     {
-      "title": "Enhanced website",
-      "desc": "Improved overall design and functionality.",
-      "date": "2026-01-09",
+      "title": "Bigger Banners",
+      "desc": "Banners now stretch all the way to the edges of the screen.",
+      "date": "2026-02-01",
+      "icon": "🎨"
+    },
+    {
+      "title": "Clearer Titles",
+      "desc": "Page titles are now easier to read with darker backgrounds.",
+      "date": "2026-02-01",
+      "icon": "📖"
+    },
+    {
+      "title": "Announcements Page",
+      "desc": "New page to see the latest news and updates.",
+      "date": "2026-02-01",
+      "icon": "📢"
+    },
+    {
+      "title": "Version Label",
+      "desc": "See 'Alpha' in the top left so you know what version you're using.",
+      "date": "2026-02-01",
+      "icon": "🏷️"
+    },
+    {
+      "title": "Dark Menu Bar",
+      "desc": "New dark top menu with a sleek look.",
+      "date": "2026-02-01",
+      "icon": "🌙"
+    },
+    {
+      "title": "Smoother Animations",
+      "desc": "Cards move and change more smoothly when you interact with them.",
+      "date": "2026-02-01",
       "icon": "✨"
     },
     {
-      "title": "The new videos tab",
-      "desc": "Explore our top videos and latest content in one place.",
-      "date": "2026-01-09",
-      "icon": "🎥"
-    },
-    {
-      "title": "Introduction video on the home page",
-      "desc": "Watch our intro video right on the home page.",
-      "date": "2026-01-09",
-      "icon": "▶️"
+      "title": "New Colors",
+      "desc": "Added purple to our orange and blue colors for a better look.",
+      "date": "2026-02-01",
+      "icon": "🎨"
     }
   ]
 }
