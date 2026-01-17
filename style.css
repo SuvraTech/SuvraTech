@@ -1153,3 +1153,109 @@ h2 {
         grid-template-columns: 1fr;
     }
 }
+
+/* Videos Section Styles */
+.video-container {
+    margin: 2rem 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--elevation-1);
+    background: #000;
+    aspect-ratio: 16 / 9;
+}
+
+.video-container iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.newest-video-section {
+    background: white;
+    padding: 3rem 2rem;
+    margin-bottom: 3rem;
+    border-radius: var(--radius);
+    box-shadow: var(--elevation-1);
+}
+
+.top-videos-section {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--elevation-1);
+}
+
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.video-card {
+    background: #f9f9f9;
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--elevation-1);
+}
+
+.video-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--elevation-2);
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-card h3 {
+    color: var(--brand-orange);
+    font-size: 1.2rem;
+    margin: 1.5rem 1.5rem 0.5rem 1.5rem;
+    font-weight: 700;
+}
+
+.video-description {
+    color: var(--muted-color);
+    font-size: 0.95rem;
+    margin: 0 1.5rem 1.5rem 1.5rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .videos-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .video-container {
+        aspect-ratio: auto;
+        height: 300px;
+    }
+    
+    .newest-video-section,
+    .top-videos-section {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* Intro video wrapper for smaller display */
+.intro-video-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+}
