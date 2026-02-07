@@ -28,10 +28,13 @@
             </button>
             <div class="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="jobs.html" class="nav-link">Jobs</a>
+                <!-- <a href="jobs.html" class="nav-link">Jobs</a> -->
                 <a href="products.html" class="nav-link">Products</a>
                 <a href="videos.html" class="nav-link">Videos</a>
-                <a href="announcements.html" class="nav-link">Announcements</a>
+                <a href="announcements.html" class="nav-link">
+                    Announcements
+                    <span id="notification-badge" class="notification-badge" style="display: none;">●</span>
+                </a>
                 <a href="about.html" class="nav-link active">About</a>
             </div>
         </div>
@@ -48,14 +51,17 @@
         </div>
     </section>
 
+    <!-- About Intro Section (Editable) -->
+    <section class="content-section about-intro">
+        <div class="container">
+            <p>SuvraTech is dedicated to innovation and excellence.</p>
+        </div>
+    </section>
+
     <!-- About Content Section -->
     <section class="about-content">
         <div class="container">
             <div class="about-grid">
-                <div class="about-item">
-                    <h2>Our Story</h2>
-                    <p>Founded with a vision to revolutionize digital technology, SuvraTech has been at the forefront of innovation. We believe in creating solutions that make a difference in people's lives.</p>
-                </div>
                 <div class="about-item">
                     <h2>Our Mission</h2>
                     <p>To deliver cutting-edge technology solutions that empower businesses and individuals to achieve their full potential in the digital age.</p>
@@ -65,6 +71,36 @@
                     <p>Innovation, integrity, and excellence are at the core of everything we do. We're committed to creating sustainable solutions for tomorrow's challenges.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="page-divider"></div>
+
+    <!-- Contact Section -->
+    <section class="content-section contact-section">
+        <div class="contact-container">
+            <h2>SHARE WITH US</h2>
+            <p>Post your feedback here!</p>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Your email">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required placeholder="What is this about?">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required placeholder="Tell us your thoughts..." rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Feedback</button>
+            </form>
         </div>
     </section>
 

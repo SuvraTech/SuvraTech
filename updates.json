@@ -42,6 +42,18 @@
       "desc": "Added purple to our orange and blue colors for a better look.",
       "date": "2026-02-01",
       "icon": "🎨"
+    },
+    {
+      "title": "Jobs and Socials Tab Removed",
+      "desc": "Jobs and Socials tabs removed from navigation.",
+      "date": "2026-02-01",
+      "icon": "🔒"
+    },
+    {
+      "title": "Share with us Section",
+      "desc": "New contact form on the about page for feedback and messages.",
+      "date": "2026-02-01",
+      "icon": "💬"
     }
   ]
 }

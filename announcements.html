@@ -28,10 +28,13 @@
             </button>
             <div class="nav-menu">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="jobs.html" class="nav-link">Jobs</a>
+                <!-- <a href="jobs.html" class="nav-link">Jobs</a> -->
                 <a href="products.html" class="nav-link">Products</a>
                 <a href="videos.html" class="nav-link">Videos</a>
-                <a href="announcements.html" class="nav-link active">Announcements</a>
+                <a href="announcements.html" class="nav-link active">
+                    Announcements
+                    <span id="notification-badge" class="notification-badge" style="display: none;">●</span>
+                </a>
                 <a href="about.html" class="nav-link">About</a>
             </div>
         </div>
@@ -54,17 +57,40 @@
         <!-- Announcements Introduction -->
         <section class="content-section announcements-intro-section">
             <h2>Stay Updated</h2>
-            <p>Stay informed with the latest announcements, updates, and news from SuvraTech. We share important developments, product releases, and company milestones here.</p>
+            <p>Stay informed with the latest announcements, updates, and news from SuvraTech.</p>
         </section>
 
         <!-- Announcements List -->
-        <section class="content-section announcements-list-section">
+        <section id="announcements-list-section" class="content-section announcements-list-section">
             <h2>Recent Announcements</h2>
             <hr class="section-divider">
-            <div class="announcement-item">
-                <h3>Update Alpha</h3>
-                <p class="announcement-date">DATE NOT DECIDED</p>
-                <p>TEXT</p>
+            <div class="announcement-item unread" data-announcement-id="alpha-update-2026-02-01">
+                <div class="announcement-header">
+                    <h3>Update Alpha</h3>
+                    <span class="announcement-badge">New</span>
+                </div>
+                <p class="announcement-date">1 February, 2026</p>
+                <p>Welcome to the new Alpha Update! This update contains the announcements tab, a darker screen, enhanced website, and more! </p>
+                <button class="mark-read-btn">Mark as read</button>
+            </div>
+
+            <!-- Editable announcement (you can edit/save/export locally) -->
+            <div class="announcement-item unread" data-announcement-id="custom-editable-2026-02-06" id="announcement-custom-editable-2026-02-06"
+                 data-default-title="New editable announcement"
+                 data-default-date="6 February, 2026"
+                 data-default-body="Click 'Edit' to modify this announcement. Use 'Save' to persist locally or 'Export' to download JSON.">
+                <div class="announcement-header">
+                    <h3 class="editable-title">New editable announcement</h3>
+                    <span class="announcement-badge">Custom</span>
+                </div>
+                <p class="announcement-date editable-date">6 February, 2026</p>
+                <p class="editable-body">Click 'Edit' to modify this announcement. Use 'Save' to persist locally or 'Export' to download JSON.</p>
+                <div class="announcement-actions">
+                    <button class="edit-ann-btn">Edit</button>
+                    <button class="save-ann-btn" style="display:none">Save</button>
+                    <button class="export-ann-btn">Export</button>
+                    <button class="reset-ann-btn">Reset</button>
+                </div>
             </div>
         </section>
     </main>
@@ -78,3 +104,4 @@
 </body>
 
 </html>
+

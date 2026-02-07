@@ -757,6 +757,34 @@ h2 {
     padding: 0.2rem 0.5rem;
 }
 
+/* Admin page styles */
+.admin-wrap{background:linear-gradient(180deg,#ffffff, #fbfbfd);box-shadow:var(--elevation-2);padding:24px;border-radius:12px}
+.admin-panel{margin-top:16px}
+.admin-tabs{flex-wrap:wrap}
+.admin-tabs .tab-btn{background:#fff;border:1px solid var(--border-gray);padding:8px 12px;border-radius:8px;cursor:pointer}
+.admin-tabs .tab-btn:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(15,23,42,0.06)}
+.list-item{background:linear-gradient(180deg,#fff,#fafafa);padding:12px;border-radius:10px;border:1px solid var(--border-gray);box-shadow:var(--elevation-1);margin-bottom:10px}
+.controls button{padding:6px 10px;border-radius:8px;border:1px solid #ddd;background:#fff;cursor:pointer}
+.controls .danger{background:#fff5f5;border-color:#ffd6d6}
+.form-row label{display:block;font-size:0.95rem;margin-bottom:6px;color:#222}
+.form-row input,.form-row textarea{width:100%;padding:8px;border-radius:8px;border:1px solid #e6e6e6}
+
+@media (max-width:900px){.admin-wrap{padding:16px;margin:16px} .hero-banner{height:40vh}}
+
+/* Drag handle and draggable list */
+.draggable-list { display: block; }
+.draggable-item { display:flex;justify-content:space-between;align-items:flex-start;padding:10px;border-radius:8px;border:1px solid #eee;background:#fff;margin-bottom:8px;cursor:grab }
+.draggable-item.dragging { opacity:0.6; }
+.drag-handle { cursor:grab;padding:6px 8px;border-radius:6px;border:1px solid #eee;background:#fafafa;margin-right:8px }
+
+/* Preview modal base */
+.modal { position:fixed; inset:0; display:flex;align-items:flex-start;justify-content:center; z-index:2000 }
+.modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.45) }
+.modal-panel { background:white;border-radius:12px;padding:18px;box-shadow:0 20px 60px rgba(0,0,0,0.4); max-height:80vh; overflow:auto }
+
+/* Small tweaks */
+.muted { color:#666; }
+
 @media (max-width: 480px) {
     .product-placeholder {
         height: 120px;
@@ -1381,6 +1409,107 @@ h2 {
     box-shadow: 0 8px 20px rgba(255, 106, 0, 0.3);
 }
 
+/* Page Divider */
+.page-divider {
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(255,106,0,0.95), rgba(139,92,246,0.9), rgba(106,130,251,0.9));
+    border-radius: 2px;
+    margin: 2rem auto;
+    box-shadow: 0 4px 12px rgba(255, 106, 0, 0.2);
+}
+
+/* Contact Section */
+.contact-section {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.98));
+    max-width: 700px;
+    margin: 4rem auto;
+    padding: 3rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+.contact-container {
+    text-align: center;
+}
+
+.contact-container h2 {
+    margin-bottom: 0.8rem;
+    font-size: 2rem;
+}
+
+.contact-container > p {
+    color: var(--muted-color);
+    margin-bottom: 2.5rem;
+    font-size: 1.05rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.form-group label {
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    color: var(--brand-orange);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: all 200ms ease;
+    color: var(--text-color);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #999;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--brand-orange);
+    box-shadow: 0 0 0 4px rgba(255, 106, 0, 0.15);
+    background: white;
+    transform: translateY(-2px);
+}
+
+.contact-form .btn {
+    align-self: center;
+    margin-top: 1.5rem;
+    min-width: 200px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-size: 0.95rem;
+    padding: 1rem 2rem;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 106, 0, 0.3);
+}
+
 /* Respect reduced motion: keep modal simple */
 @media (prefers-reduced-motion: reduce) {
     .modal-panel {
@@ -1645,8 +1774,8 @@ h2 {
 .about-hero-section {
     position: relative;
     width: 100vw;
-    height: 60vh;
-    min-height: 400px;
+    height: 62vh;
+    min-height: 420px;
     overflow: hidden;
     margin-bottom: 4rem;
     margin-left: calc(-50vw + 50%);
@@ -1848,4 +1977,84 @@ h2 {
 .announcement-item p {
     color: #444;
     line-height: 1.7;
+}
+
+/* Notification Badge */
+.notification-badge {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--brand-orange);
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Announcement Header */
+.announcement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.announcement-header h3 {
+    margin: 0;
+}
+
+.announcement-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--brand-orange), var(--brand-purple));
+    color: white;
+    padding: 0.25rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Unread Announcements */
+.announcement-item.unread {
+    border-left: 5px solid var(--brand-orange);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(248, 250, 252, 0.98));
+}
+
+.announcement-item.read {
+    opacity: 0.7;
+    border-left: 5px solid #ccc;
+}
+
+/* Mark Read Button */
+.mark-read-btn {
+    background: linear-gradient(135deg, var(--brand-orange), var(--brand-purple));
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 200ms ease;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.mark-read-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 106, 0, 0.3);
+}
+
+.announcement-item.read .mark-read-btn {
+    display: none;
 }

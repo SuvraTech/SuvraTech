@@ -1,0 +1,15 @@
+{
+  "announcements": [],
+  "videos": [],
+  "home": {
+    "heroTitle": "Welcome to SuvraTech",
+    "heroSubtitle": "Latest News from SuvraTech",
+    "heroBanner": "SuvraTech Banner.png",
+    "sections": []
+  },
+  "products": [],
+  "about": {
+    "title": "About SuvraTech",
+    "body": "SuvraTech is dedicated to innovation and excellence."
+  }
+}
