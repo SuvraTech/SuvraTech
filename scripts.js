@@ -650,19 +650,28 @@ document.addEventListener('DOMContentLoaded', function () {
             // Pre-fill from existing session
             if (isAdmin()) showPanelFor(sessionStorage.getItem(SESSION_KEY));
 
-            loginBtn.addEventListener('click', function () {
-                const u = (userField.value || '').trim();
-                const p = (passField.value || '');
-                if (u === ADMIN_USER && p === ADMIN_PASS) {
-                    msg.textContent = 'Welcome, admin.';
-                    showPanelFor(u);
-                } else {
-                    msg.textContent = 'Invalid credentials.';
-                }
-            });
+            // Attach login handler only if the button exists (avoid runtime errors)
+            if (loginBtn) {
+                loginBtn.addEventListener('click', function () {
+                    const u = (userField && userField.value || '').trim();
+                    const p = (passField && passField.value || '');
+                    if (u === ADMIN_USER && p === ADMIN_PASS) {
+                        if (msg) msg.textContent = 'Welcome, admin.';
+                        showPanelFor(u);
+                    } else {
+                        if (msg) msg.textContent = 'Invalid credentials.';
+                    }
+                });
+            } else {
+                console.warn('Admin login button not found: #admin-login-btn');
+            }
 
-            clearBtn.addEventListener('click', function () { userField.value = ''; passField.value = ''; msg.textContent = ''; });
-            document.getElementById('admin-logout').addEventListener('click', logout);
+            if (clearBtn) {
+                clearBtn.addEventListener('click', function () { if (userField) userField.value = ''; if (passField) passField.value = ''; if (msg) msg.textContent = ''; });
+            }
+
+            const logoutEl = document.getElementById('admin-logout');
+            if (logoutEl) logoutEl.addEventListener('click', logout);
 
             // Tabs
             function initAdminTabs() {
